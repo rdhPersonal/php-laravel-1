@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create(table: 'tasks', callback: function (Blueprint $table): void {
             $table->id();
 
-            $table->string('title');
-            $table->text('description');
-            $table->text('long_description')->nullable();
-            $table->boolean('completed')->default(false);
-            
+            $table->string(column: 'title');
+            $table->text(column: 'description');
+            $table->text(column: 'long_description')->nullable();
+            $table->boolean(column: 'completed')->default(value: false);
+
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists(table: 'tasks');
     }
 };

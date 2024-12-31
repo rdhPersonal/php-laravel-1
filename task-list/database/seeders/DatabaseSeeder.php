@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'test2@example.com',
         ]);
 */
-        }
+
+    }
 }
