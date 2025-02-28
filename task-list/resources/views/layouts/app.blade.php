@@ -4,7 +4,7 @@
 <head>
   <title>Laravel 10 Task List App</title>
       <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+      <script src="//unpkg.com/alpinejs" defer></script>
 
   {{-- blade-formatter-disable --}}
   <style type="text/tailwindcss">
